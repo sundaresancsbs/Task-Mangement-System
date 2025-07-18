@@ -1,0 +1,131 @@
+.task-details {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.task-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.task-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.task-info {
+  margin-bottom: 2rem;
+}
+
+.task-info p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.task-info strong {
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+.description {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  white-space: pre-wrap;
+}
+
+.status, .priority {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status.todo {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.status.in-progress {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.complete {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.priority.high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.priority.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.priority.low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.due-date {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.reminder-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #6c757d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reminder-button:hover {
+  background-color: #5a6268;
+}
+
+.reminder-button.active {
+  background-color: #28a745;
+}
+
+.reminder-button.active:hover {
+  background-color: #218838;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8d7da;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+  

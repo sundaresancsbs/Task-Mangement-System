@@ -1,0 +1,331 @@
+.task-list {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.task-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.task-list-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sort-select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.task-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-card.overdue {
+    border-left: 4px solid #dc3545;
+}
+
+.task-card.due-today {
+    border-left: 4px solid #ffc107;
+}
+
+.task-card.due-soon {
+    border-left: 4px solid #17a2b8;
+}
+
+.task-card.upcoming {
+    border-left: 4px solid #28a745;
+}
+
+.task-card.no-date {
+    border-left: 4px solid #6c757d;
+}
+
+.task-card.invalid {
+    border-left: 4px solid #6c757d;
+}
+
+.task-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.task-card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.task-card-body {
+    color: #666;
+}
+
+.task-description {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.task-meta {
+    font-size: 0.9rem;
+}
+
+.task-meta p {
+    margin: 0.5rem 0;
+}
+
+.due-date-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.due-date {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.time-remaining {
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.time-remaining.overdue {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.time-remaining.due-today {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.time-remaining.due-soon {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.time-remaining.upcoming {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.time-remaining.no-date {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.time-remaining.invalid {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.priority-badge,
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.priority-high {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.priority-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.priority-low {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-todo {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.status-in-progress {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-complete {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.loading-message,
+.error-message,
+.no-tasks-message {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border-radius: 4px;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.delete-btn:hover {
+    background-color: #f8f9fa;
+    color: #dc3545;
+    transform: scale(1.1);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+.task-menu {
+    position: relative;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.menu-btn:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+    transform: scale(1.1);
+}
+
+.menu-btn:active {
+    transform: scale(0.95);
+}
+
+.menu-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    min-width: 120px;
+    z-index: 1000;
+    margin-top: 0.5rem;
+    animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delete-option {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    color: #dc3545;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+.delete-option:hover {
+    background-color: #fee2e2;
+}
+
+.delete-option:active {
+    background-color: #fecaca;
+}
+
+@media (max-width: 768px) {
+    .task-list {
+        padding: 1rem;
+    }
+
+    .task-list-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .tasks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+  

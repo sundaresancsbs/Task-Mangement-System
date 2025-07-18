@@ -1,0 +1,79 @@
+/* App.css */
+.navbar {
+  background: rgba(37, 99, 235, 0.95);
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  margin: 1.5rem auto 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  border: 1.5px solid rgba(99, 102, 241, 0.10);
+  display: flex;
+  align-items: center;
+  animation: navbarFadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes navbarFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-30px) scale(0.98);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.75rem;
+  transition: 
+      background 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+      color 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+      box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-list li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+  z-index: 0;
+}
+
+.nav-list li a:hover::before {
+  width: 220%;
+  height: 500%;
+}
+
+.nav-list li a:hover {
+  color: #2563eb;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.12);
+  z-index: 1;
+}
+
+.nav-list li a:active {
+  background: #dbeafe;
+  color: #1e40af;
+}
